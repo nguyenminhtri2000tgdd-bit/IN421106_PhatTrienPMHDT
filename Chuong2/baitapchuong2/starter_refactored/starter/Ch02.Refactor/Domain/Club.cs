@@ -14,7 +14,7 @@ public class Club
     // [GT] Lợi ích: ai muốn tạo Club (service, test, console...) đều đi qua cổng này nên không thể tạo Club sai.
     public static Club Create(string name, string description)
     {
-        // [GT] Tên rỗng / null / toàn khoảng trắng -> ArgumentException (giữ đúng thông báo của code cũ).
+        // [GT] Tên rỗng / null / toàn khoảng trắng -> ArgumentException.
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Club name is required", nameof(name));
 
